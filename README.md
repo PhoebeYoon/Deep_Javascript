@@ -29,8 +29,13 @@ speechSynthesis는 speak, cancel, pause, resume 함수를 갖고 있어서 재�
     <script>
       function say(){
        const mySpeech = window.speechSynthesis;
-       const contents  =  new SpeechSynthesisUtterance('Hello world in Korea') ;
+
+       const contents  =  new SpeechSynthesisUtterance('안녕하세요 지원자 홍길동입니다 ' );
+       contents.voice = speechSynthesis.getVoices()[0];
+       contents.lang="ko"
+       contents.rate = 1;
        mySpeech.speak(contents)
       }
-</script>
+
+    </script>
 ```   
