@@ -20,7 +20,7 @@ speechSynthesis는 speak, cancel, pause, resume 함수를 갖고 있어서 재�
  - lang : 따로 지정하지 않는다면 html 문서에 지정된 language를 기본값으로 취한다
  - voice  : SpeechSynthesisVoice 객체를 값으로 설정할 수 있지만 따로 지정하지 않으면 defaultvoice를 사용한다
  - volume : 최소 0에서 최대 1의 값을 갖고 있으면 기본값은 1이다
- - rate 
+ - rate  : 말하는 속도로, 0 ~10 사이를 지정할 수 있으며, 기본값은 1이다.
  - pitch : 소리의 높이를 결정하는 것으노 기본값은 1이고 0~2 사이의 값을 지정할 수 있다
  - getVoice() 함수는 speechSynthesis 가 사용할 수 있는 SpeechSynthesisVoice 목록을 반환하지만 voice 목록이 초기화되고 voiceschanged 이벤트가 호출된 후에 getVoice() 이벤트가 사용할 voice 목록이 리턴된다
 
