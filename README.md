@@ -15,7 +15,17 @@ Web speech API 의 하나로 주어진 텍스트를 소리로 바꾸어주는 TT
 speechSynthesis는 speak, cancel, pause, resume 함수를 갖고 있어서 재생할 음성을 추가하거나 취소, 일시정지가 가능한다
 여기서 speak() 함수는 SpeechSynthesisUtterance 를 인자로 받아야 한다. 
 
-### SpeechSynthesisUtterance의 6개의 속성과 함수
+- SpeechSynthesis.paused (read only)   
+- SpeechSynthesis.speaking (read only)   
+- SpeechSynthesis.cancel()    
+- SpeechSynthesis.getVoices()    
+- SpeechSynthesis.resume()   
+- SpeechSynthesis.speak()등이 있으며,   
+
+addEventListener()를 이용하여 이벤트를 수신한다. 
+또한 voiceschanged는 SpeechSynthesis.getVoices()메서드에 의해 반환되는 SpeechSynthesisVoice 객체목록이 변경될때 발생한다
+
+## SpeechSynthesisUtterance의 6개의 속성과 함수
  - text : 읽어야 하는 문구이다. 
  - lang : 따로 지정하지 않는다면 html 문서에 지정된 language를 기본값으로 취한다
  - voice  : SpeechSynthesisVoice 객체를 값으로 설정할 수 있지만 따로 지정하지 않으면 defaultvoice를 사용한다
