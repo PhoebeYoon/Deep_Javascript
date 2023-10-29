@@ -48,5 +48,27 @@ div {color:gold;}
     console.log(document.styleSheets.item(0)) 
 ```
 
+## styleSheets.cssRules 속성
+위의 예제에서 styleSheets[인덱스]의 속성 중에 cssRules은 스타일로 지정된 내용을 리턴한다.   
+```html
+ <style> 
+        #foo { color: red; background-color: greenyellow; } 
+        span { font-weight: bold; } 
+</style>
+
+<div id='foo'>Css Rule</div>
+
+ <script>
+     var cssRules = document.styleSheets[0].cssRules;
+     for (var i = 0; i < cssRules.length; i++) {
+       console.log(cssRules[i].cssText);
+       console.log(cssRules.item(i).cssText);
+     }
+</script>
+
+```
+
+
+
 
 
