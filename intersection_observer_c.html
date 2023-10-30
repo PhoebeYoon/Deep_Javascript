@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.section {height: 100vh;width: 100vw;
+  display: flex;justify-content: center;align-items: center;}
+.one {background: lightblue;}
+.two {background: lightgreen;}
+.three {background: lightblue;}
+.circle { position: fixed; height: 200px;
+  width: 200px; border-radius: 150px;
+  background: blue;}
+.active {background: green;}
+    </style>
+</head>
+<body>
+    <section class="section one"> 
+        <div class="circle"></div>
+    </section>
+    <section class="section two"></section>
+    <section class="section three"> </section>
+<script>
+  let circle = document.querySelector('.circle');  
+  const changeColor= (entries, observer) =>{
+         entries.forEach( entry =>{
+            console.log( "entry.isIntersecting", entry.isIntersecting)
+            if(entry.isIntersecting){
+                circle.classList.add('active')
+            } else {
+                circle.classList.remove('active')
+            }
+        })
+  }
+ let options ={
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+}
+ 
+let observer = new IntersectionObserver(changeColor, options)
+let target = document.querySelector('.two')
+
+observer.observe(target)
+</script>
+
+</body>
+</html>
