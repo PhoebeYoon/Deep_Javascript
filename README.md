@@ -105,7 +105,7 @@ IntersectionObserver {root: null, rootMargin: '0px 0px 0px 0px',
  let options ={
   root: null,
   rootMargin: '0px',
-  threshold: 0
+  threshold: 0  // 타켓이 뷰포트안에 들어오자마자 실행되지 않고 30%지점에 도달할때 변경하고자 한다면 0.3을 입력하면 된다 
 }
 let observer = new IntersectionObserver(changeColor, options)
 let target = document.querySelector('.two')
