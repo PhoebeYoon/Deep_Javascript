@@ -29,6 +29,10 @@ io.observe(element)
 #### options: 
  - root : default: null, 브라우저의 viewport, 교차 영역의 기준이 될 root 엘리먼트. observe의 대상으로 등록할 엘리먼트는 반드시 root의 하위 엘리먼트여야 합니다.
  - rootMargin : default: '0px 0px 0px 0px , root 엘리먼트의 마진값. css에서 margin을 사용하는 방법으로 선언할 수 있고, 축약도 가능하다. px과 %로 표현할 수 있습니다. rootMargin 값에 따라 교차 영역이 확장 또는 축소된다.
+
+  ( 추적하고 있는 타켓이 뷰포트 안으로 들어갈때 0px이면 원래 주어진값으로 마진값을 계산하고 100px 이면 ahead의 개념으로 실제존재하는 위치보다 100px 더 위쪽에 있다고 계산하는 듯, 반대로 -100px 이라고 하면 뷰포트안에 들어갔지만 반응하지 않는다 )
+
+
  - threshold : default: 0 , 
      0.0부터 1.0 사이의 숫자 혹은 이 숫자들로 이루어진 배열로, 타겟 엘리먼트에 대한 교차 영역 비율을 의미합니다. 0.0의 경우 타겟 엘리먼트가 교차영역에 진입했을 시점에 observer를 실행하는 것을 의미하고, 1.0의 경우 타켓 엘리먼트 전체가 교차영역에 들어왔을 때 observer를 실행하는 것을 의미합니다.
 
@@ -109,7 +113,8 @@ observer.observe(target)
 // changeColor는 어떤 일을 해야 하는지를 알려주는 것이다
 
 ```
-
+코드출처 ) https://medium.com/@syogifse/intersection-observer-api ~ ,
+https://codepen.io/ygsjv/pen/oNGREeR
 
 
 
