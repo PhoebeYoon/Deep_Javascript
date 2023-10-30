@@ -2,16 +2,29 @@
 
 ## IntersectionObserver    
 Intersection Observer API는 상위 요소 또는 최상위 문서의 뷰포트와 대상 요소의 교차에 대한 변화를 비동기적으로 관찰하는 방법을 제공한다.  
+즉, 어떤요소가 기본적으로 브라우저의 뷰포트 안에 들어왔는지 지금 보이는 요소인지 아닌지를 구별할 수 있게 해준다.  
+이 기능은 비동기적으로 실행되므로 scroll 이벤트 사용시 발생하는 렌더링성능을 좋아지고 이벤트 연속호출과 같은 문제를 해결할 수 있다.   
+
 기본사용방법은 여러 엘리먼트에 이벤트를 한번에 등록하고 싶다면 콜백함수에 forEach()를 사용한다. IntersectionObserver를 생성하기 위해서는 교차되었을대 실행할 콜백함수를 등록하고 options 지정할 수 있다
 
 ### 기본구조 
 ```
-const io = new IntersectionObserver(callback[, options]) 
+const io = new IntersectionObserver((entries , observer )=>{    }[, options])
+io.observe(element)
 ```
 
 #### callback: 타겟 엘리먼트가 교차되었을 때 실행할하며  배열형식으로 리턴하며, 2개의 값 (entries, observer)를 가진다.
   - entries :  IntersectionObserverEntry 객체의 리스트로 배열형식으로 반환된다. 그래서 forEach()를 사용한다.
-  - observer : 콜백함수가 호출되는 IntersectionObserver   
+  - observer : 콜백함수가 호출되는 IntersectionObserver
+
+### entires는 IntersectionObserverEntry 인스턴스의 배열이다. 이는 읽기전용으로 다음과 같은 속성을 가진다.
+  - boundingClientRect : 관찰대상의 사각형 정보
+  - intersectionRect : 관찰대상의 교차영역정보
+  - intersectionRatio : 관찰대상의 교차할 영역 백분율로 intersectionRect 영역에서 boundingClientRect영역까지의 비율
+  - insIntersecting : 관찰대상의 교차상태로 boolean 값이다
+  - rootBounds : 지정한 루트요소의 사각형정보
+  - target : 관찰대상 요소
+  - time : 변경이 발생한 시간정보
     
 #### options: 
  - root : default: null, 브라우저의 viewport, 교차 영역의 기준이 될 root 엘리먼트. observe의 대상으로 등록할 엘리먼트는 반드시 root의 하위 엘리먼트여야 합니다.
