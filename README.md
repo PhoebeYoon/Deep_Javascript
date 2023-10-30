@@ -45,6 +45,11 @@ io.observe(element)
     - IntersectionObserver.takerecords() : 
       IntersectionObserverEntry 객체의 배열을 리턴합니다.
 
+> 연속적인 scroll 의 문제는 reflow 현상이다.  reflow는 문서내의 요소들의 위치과 도형을 다시 계산하기위해 다시 랜더링하는 것을 말한다. 
+
+
+참고 ) https://blog.hyeyoonjung.com/2019/01/09/intersectionobserver-tutorial/
+https://developer.mozilla.org/ko/docs/Web/API/IntersectionObserver/IntersectionObserver
 
 ### 분석하기
 ```js
@@ -57,11 +62,57 @@ console.log(io)
 IntersectionObserver {root: null, rootMargin: '0px 0px 0px 0px',
  thresholds: Array(1), delay: 0, trackVisibility: false}
 ```
-출력한다
+출력한다    
+
+```html
+    <style>
+.section {height: 100vh;width: 100vw;
+  display: flex;justify-content: center;align-items: center;}
+.one {background: lightblue;}
+.two {background: lightgreen;}
+.three {background: lightblue;}
+.circle { position: fixed; height: 200px;
+  width: 200px; border-radius: 150px;
+  background: blue;}
+.active {background: green;}
+    </style>
+ <section class="section one"> 
+        <div class="circle"></div>
+</section>
+<section class="section two"></section>
+<section class="section three"> </section>
+
+<script>
+  let circle = document.querySelector('.circle');
+
+ const changeColor= (entries, observer) =>{
+         entries.forEach( entry =>{
+            console.log( "entry.isIntersecting", entry.isIntersecting)
+            if(entry.isIntersecting){
+                circle.classList.add('active')
+            } else {
+                circle.classList.remove('active')
+            }
+        })
+  }
+
+ let options ={
+  root: null,
+  rootMargin: '0px',
+  threshold: 0
+}
+let observer = new IntersectionObserver(changeColor, options)
+let target = document.querySelector('.two')
+observer.observe(target)
+// observe할 대상으로 target를 주고 target이 변경이 되면 observer로 지정된 즉,
+// const changeColor= (entries, observer) =>{  }를 실행하도록 한다. 이때
+// changeColor는 어떤 일을 해야 하는지를 알려주는 것이다
+
+```
 
 
-> 연속적인 scroll 의 문제는 reflow 현상이다.  reflow는 문서내의 요소들의 위치과 도형을 다시 계산하기위해 다시 랜더링하는 것을 말한다. 
 
 
-참고 ) https://blog.hyeyoonjung.com/2019/01/09/intersectionobserver-tutorial/
-https://developer.mozilla.org/ko/docs/Web/API/IntersectionObserver/IntersectionObserver
+
+
+
