@@ -33,5 +33,22 @@ const io = new IntersectionObserver(callback[, options])
       IntersectionObserverEntry 객체의 배열을 리턴합니다.
 
 
+### 분석하기
+```js
+ const io = new IntersectionObserver(entries =>{ 
+      })
+console.log(io)
+```
+결과로는 
+```
+IntersectionObserver {root: null, rootMargin: '0px 0px 0px 0px',
+ thresholds: Array(1), delay: 0, trackVisibility: false}
+```
+출력한다
+
+
+
+
+
 참고 ) https://blog.hyeyoonjung.com/2019/01/09/intersectionobserver-tutorial/
 https://developer.mozilla.org/ko/docs/Web/API/IntersectionObserver/IntersectionObserver
