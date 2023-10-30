@@ -60,7 +60,7 @@ IntersectionObserver {root: null, rootMargin: '0px 0px 0px 0px',
 출력한다
 
 
-
+> 연속적인 scroll 의 문제는 reflow 현상이다.  reflow는 문서내의 요소들의 위치과 도형을 다시 계산하기위해 다시 랜더링하는 것을 말한다. 
 
 
 참고 ) https://blog.hyeyoonjung.com/2019/01/09/intersectionobserver-tutorial/
