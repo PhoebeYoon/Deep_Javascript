@@ -38,7 +38,9 @@ console.log(window.matchMedia("(min-width: 800px)").media)  // (min-width: 800px
 
 [change  이벤트]
 ```html
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique corporis, reiciendis impedit at non sunt laboriosam earum sit necessitatibus id incidunt harum neque tempore ad consequuntur nulla. Culpa, eligendi illo?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique corporis,
+reiciendis impedit at non sunt laboriosam earum sit necessitatibus id incidunt
+harum neque tempore ad consequuntur nulla. Culpa, eligendi illo?</p>
     <script>
 const para = document.querySelector("p");
 const mql = window.matchMedia("(max-width: 600px)");
@@ -58,7 +60,4 @@ function screenTest(e) {
 mql.addEventListener("change", screenTest);
     </script>
 ```
-
-
-
 
