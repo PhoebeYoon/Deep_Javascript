@@ -12,12 +12,11 @@ matches는 Instance properties에 속하며, media 라는 읽기전용 속성도
 -  matches : 문서가 현재 미디어 쿼리 목록과 일치하는 경우 true를 반환하고 그렇지 않은 경우 false를 반환하는 부울 값입니다.
 -  media :직렬화된 미디어 쿼리를 나타내는 문자열입니다.
 ### Instance methods
-- addListner
-- removeListener
+- addListener  // 이것은 이전 버전의 호환을 위해 존재하므로 addEventListener() 사용권고
+- removeListener // 이것은 이전 버전의 호환을 위한 것으로 removeEventListener() 사용권고 합니다
 
 ### Events
-- change
-
+- change ( 예제 참조)
 
 
 ```html
@@ -35,3 +34,31 @@ matches는 Instance properties에 속하며, media 라는 읽기전용 속성도
 console.log(window.matchMedia("(min-width: 800px)").matches)  // false or ture
 console.log(window.matchMedia("(min-width: 800px)").media)  // (min-width: 800px) 출력
 ```
+
+
+[change  이벤트]
+```html
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique corporis, reiciendis impedit at non sunt laboriosam earum sit necessitatibus id incidunt harum neque tempore ad consequuntur nulla. Culpa, eligendi illo?</p>
+    <script>
+const para = document.querySelector("p");
+const mql = window.matchMedia("(max-width: 600px)");
+
+function screenTest(e) {
+  if (e.matches) {
+    /* the viewport is 600 pixels wide or less */
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
+  } else {
+    /* the viewport is more than 600 pixels wide */
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
+  }
+}
+
+mql.addEventListener("change", screenTest);
+    </script>
+```
+
+
+
+
