@@ -30,4 +30,8 @@ matches는 Instance properties에 속하며, media 라는 읽기전용 속성도
 </script>
 
 ```
-
+위의 예제에서 
+```
+console.log(window.matchMedia("(min-width: 800px)").matches)  // false or ture
+console.log(window.matchMedia("(min-width: 800px)").media)  // (min-width: 800px) 출력
+```
