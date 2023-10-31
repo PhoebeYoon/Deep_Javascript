@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique corporis, reiciendis impedit at non sunt laboriosam earum sit necessitatibus id incidunt harum neque tempore ad consequuntur nulla. Culpa, eligendi illo?</p>
+    <script>
+const para = document.querySelector("p");
+const mql = window.matchMedia("(max-width: 600px)");
+console.log(mql)
+
+function screenTest(e) {
+  if (e.matches) {
+    /* the viewport is 600 pixels wide or less */
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
+  } else {
+    /* the viewport is more than 600 pixels wide */
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
+  }
+}
+
+mql.addEventListener("change", screenTest);
+    </script>
+</body>
+</html>
