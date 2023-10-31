@@ -16,7 +16,7 @@ matches는 Instance properties에 속하며, media 라는 읽기전용 속성도
 - removeListener // 이것은 이전 버전의 호환을 위한 것으로 removeEventListener() 사용권고 합니다
 
 ### Events
-- change ( 예제 참조)
+- change : 문서에 대해 미디어 쿼리를 실행한 결과가 변경될 때 MediaQueryList로 전송됩니다 ( 맨 아래 예제 참조)
 
 
 ```html
