@@ -9,7 +9,10 @@ MediaQueryList에 말 그대로 media query 절이 들어간다. MediaQueryList 
 matches는 Instance properties에 속하며, media 라는 읽기전용 속성도 있습니다.
 
 ### Instance properties
--  matches : 문서가 현재 미디어 쿼리 목록과 일치하는 경우 true를 반환하고 그렇지 않은 경우 false를 반환하는 부울 값입니다.
+-  matches : 문서가 현재 미디어 쿼리 목록과 일치하는 경우 true를 반환하고 그렇지 않은 경우 false를 반환하는 부울 값입니다.   
+    참고로, ```const mql = window.matchMedia("(max-width: 600px)");``` 의 결과는   
+      matches:true or false, (max-width: 600px), onchange:null 이 반환된다
+   
 -  media :직렬화된 미디어 쿼리를 나타내는 문자열입니다.
 ### Instance methods
 - addListener  // 이것은 이전 버전의 호환을 위해 존재하므로 addEventListener() 사용권고
