@@ -21,7 +21,7 @@ io.observe(element)
   - boundingClientRect : 관찰대상의 사각형 정보
   - intersectionRect : 관찰대상의 교차영역정보
   - intersectionRatio : 관찰대상의 교차할 영역 백분율로 intersectionRect 영역에서 boundingClientRect영역까지의 비율
-  - insIntersecting : 관찰대상의 교차상태로 boolean 값이다
+  - isIntersecting : 관찰대상의 교차상태로 boolean 값이다
   - rootBounds : 지정한 루트요소의 사각형정보
   - target : 관찰대상 요소
   - time : 변경이 발생한 시간정보
