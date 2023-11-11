@@ -43,6 +43,18 @@ for(let key in man) {
 
 ```
 
+### 속성값 약식
+```js
+function makeUser(name, age){
+    return { 
+        name:name,
+        age:age
+    }
+}
+let user1 = makeUser('Park' , 15)
+console.log(user1.name, user1.age)
+```
+
 
 ### 매개변수 없는 오브젝트와 메소드
 ```js
@@ -58,17 +70,7 @@ const person = {
 ```
 여기서의 this는 객체를 가리킨다.  
 
-### 속성값 약식
-```js
-function makeUser(name, age){
-    return { 
-        name:name,
-        age:age
-    }
-}
-let user1 = makeUser('Park' , 15)
-console.log(user1.name, user1.age)
-```
+
 
 
 ### 매개변수를 갖는 오브젝트와 메소드
