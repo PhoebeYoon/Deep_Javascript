@@ -1,18 +1,86 @@
 #### :peach: javascript
 
 
-## cloneNode()
+## Object란
 
-노드 인터페이스의 cloneNode() 메서드는 이 메서드가 호출된 노드의 복제를 반환합니다. 이 매개 변수는 노드에 포함된 하위 트리도 복제되었는지 여부를 제어합니다. 노드를 복제하면 intrinsic (inline) listeners를 포함하여 모든 속성과 값이 복사됩니다.  
-```html
- <div id="para1">
-        clone test
-    </div>
-  <script>
-      let p = document.getElementById("para1");
-      let p_prime = p.cloneNode(true);
-      document.body.appendChild(p_prime);
-  </script>
+자바스크립트는 단순한 객체기반(object-based) 패러다임을 기반으로 설계되었다.   
+객체는 속성들의 집합이고 속성은 이름(키)과 값의 조합으로 이루어졌다.  또한 속성의 값은 함수가 될 수 있는데 이런 속성을 메소드(method) 라고 한다  
 
 ```
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+```
+### 오브젝트 접근해서 값을 가져오기   
+1. 오브젝트이름.속성이름  
+2. 오브젝트이름['속성이름']   
+
+
+```
+const man ={
+    adult: false,
+    name : "Kim",
+    age : 17,
+    height: 170,
+    weight: 60,
+    school : 'SeaMeng',
+    isHandsome:false
+}
+console.log(man.adult)
+console.log(man.name)
+console.log("--- value만 출력")
+for(let key in man) {
+    console.log(man[key])
+}
+
+console.log('----- key만 출력')
+for(let key in man) {
+    console.log(key)
+}
+
+```
+
+
+### 매개변수 없는 오브젝트와 메소드
+```js
+
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+```
+여기서의 this는 객체를 가리킨다.  
+
+### 속성값 약식
+```
+function makeUser(name, age){
+    return { 
+        name:name,
+        age:age
+    }
+}
+let user1 = makeUser('Park' , 15)
+console.log(user1.name, user1.age)
+```
+
+
+
+
+
+
+
+```
+
+### 매개변수를 갖는 오브젝트와 메소드
+
+```
+
+
 
