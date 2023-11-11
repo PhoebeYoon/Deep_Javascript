@@ -1,6 +1,8 @@
 #### :peach: javascript
 
-### node.js에서 자바스크립트의 파일은 command 명령어로 실행하기
+### node.js에서 자바스크립트의 파일은 command js 기반으로 사용해야 한다.
+
+에디터를 이용하여 아래 2개의 파일을 작성한다. 
 
 [myfile1.js]
 ```js
