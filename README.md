@@ -74,9 +74,22 @@ const person = {
 
 
 ### 매개변수를 갖는 오브젝트와 메소드
-
+위의 예제에 추가해서 사용해 보자.  
 ```
+const man ={
+    adult: false,
+    name : "Kim",
+    age : 17,
+    height: 170,
+    weight: 60,
+    school : 'SeaMeng',
+    isHandsome:false,
+    isReturn : function(yesno){
+        console.log(` ${this.name}의 킥보드 반환여부는  ${yesno} 이다`)
+    }
+}
 
+man.isReturn(true); //결과는 Kim의 킥보드 반환여부는 true이다
 ```
 
 
