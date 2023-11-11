@@ -59,7 +59,7 @@ const person = {
 여기서의 this는 객체를 가리킨다.  
 
 ### 속성값 약식
-```
+```js
 function makeUser(name, age){
     return { 
         name:name,
