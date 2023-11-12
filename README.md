@@ -107,6 +107,23 @@ console.log(circle.color);
 console.log(circle.diameter);
     </script>
 ```
+## for in loop
+위의 예제 circle를 재사용합니다. 
+
+```js
+let circle = {
+    color : 'yellow',
+    diameter : 100,
+    radius : function() {
+    return this.diameter / 2; 
+    }
+
+for(let item in circle){
+    console.log(item)
+}
+```
+
+
 
 
 
