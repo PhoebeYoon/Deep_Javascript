@@ -120,6 +120,9 @@ let circle = {
 
 for(let item in circle){
     console.log(item)
+    // 또는
+    console.log( item , circle[item]) 또는 
+   console.log( `${item} :  ${circle[item]}`)
 }
 ```
 
