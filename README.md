@@ -41,4 +41,4 @@ https://ko.javascript.info/fetch
 https://docs.fileformat.com/ko/web/json/   
 
 📖 참조영상 :  
-https://www.youtube.com/watch?v=FhguwBJeqWs&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=2   
+https://www.youtube.com/watch?v=NMJiqIadnMc    
