@@ -34,8 +34,11 @@
 5. 파일 중 38_fetch.html 파일을 vscode로 불러온 후 설치된 확장 프로그램 Live Server 를 이용하여 브라우저로 연다.  
 
 
-📖  명령어 참조
+📖  명령어 참조   
 https://mirabo.tistory.com/178
 
 https://ko.javascript.info/fetch     
 https://docs.fileformat.com/ko/web/json/   
+
+📖 참조영상 :  
+https://www.youtube.com/watch?v=FhguwBJeqWs&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=2   
