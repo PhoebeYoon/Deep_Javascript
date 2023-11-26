@@ -3,10 +3,6 @@
 작성 중... 
 
 
-💢 주석처리 ``` /**    */  ``` 는 .js 파일에서 사용
-
-
-
 ### 위의 파일 fullstack-javascript.zip 에서 json 부분 다룰때  실행방법 
 1. 터미널에서 npm install -g json-server
 2. db.json
@@ -36,6 +32,10 @@
 
 📖  명령어 참조   
 https://mirabo.tistory.com/178
+
+
+### 요렇게 해보세요 
+💢 주석처리 ``` /**    */  ``` 는 .js 파일에서 사용
 
 https://ko.javascript.info/fetch     
 https://docs.fileformat.com/ko/web/json/   
