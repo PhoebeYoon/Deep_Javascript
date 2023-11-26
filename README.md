@@ -28,3 +28,8 @@
 22. Async Await, Promises
 23. ajax & fetching data
 24. 그외
+
+### Sources 탭에 대한 설명
+1. Watch - 표현식을 평가하고 결과를 보여준다
+2. Call Stack - 코드를 해당 중단점으로 안내한 실행경로를 역순으로 표시한다
+3. Scope - 현재 정의된 모든 변수를 출력한다.
