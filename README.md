@@ -1,44 +1,30 @@
 #### :peach: javascript
 
-작성 중... 
+ 
 
 
-### 위의 파일 fullstack-javascript.zip 에서 json 부분 다룰때  실행방법 
-1. 터미널에서 npm install -g json-server
-2. db.json
-3.
- ```json
-  {
- "posts" :[{"id":1, "title":"json-server"}],
- "comments" : [{"id":1 , "body":"some comment"}],
- "profile":{"name":"ttt"}
-}
-```
-
-4. json-server --watch db.json 실행 후 터미널 창에
-```
- Resources
-  http://localhost:3000/posts
-  http://localhost:3000/comments
-  http://localhost:3000/profile
-
-  Home
-  http://localhost:3000
-  ```
-출력된다.  
-
-5. 파일 중 38_fetch.html 파일을 vscode로 불러온 후 설치된 확장 프로그램 Live Server 를 이용하여 브라우저로 연다.  
-
-
-📖  명령어 참조   
-https://mirabo.tistory.com/178
-
-
-### 요렇게 해보세요 
-💢 주석처리 ``` /**    */  ``` 는 .js 파일에서 사용
-
-https://ko.javascript.info/fetch     
-https://docs.fileformat.com/ko/web/json/   
-
-📖 참조영상 :  
-https://www.youtube.com/watch?v=NMJiqIadnMc    
+### 📖 기초내용
+1. 수업설명
+2. Browser, Editor and Terminal 셋팅하기   
+3. 자바스크립트 실행환경   
+4. Variables and Statements    
+5. 확장프로그램 설치하기    
+6. 자료형 - Strings, Numbers,
+7. Scope
+8. 자료형 - Booleans , null, undefined
+9. 자료형 - Array, Ojbect
+10. 호이스팅이란 ( Hoisting)
+11. Closures
+12. 조건문, 반복문 (forEach, Filter, Find, Reduce, for in, for of)
+13. DOM - 엘리먼트 선택하기
+14. DOM - 엘리먼트 속성 및 메소드
+15. DOM - 클래스 선택하기
+16. DOM - Data-속성
+17. DOM - Creating HTML, Traversing and Removing Nodes
+18. Event Listener
+19. Event - targets, preventDefault, Form events
+20. Event - Scroll, Modal, Tabs
+21. Prototypes - This, New
+22. Async Await, Promises
+23. ajax & fetching data
+24. 그외
