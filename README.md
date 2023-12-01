@@ -12,6 +12,52 @@ addEventListener("transitionend", (event) => {});
 ontransitionend = (event) => {};
 
 ```
+### 예제
+```
+<style>
+.transition {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 0, 0, 1);
+  transition-property: transform, background;
+  transition-duration: 2s;
+  transition-delay: 1s;
+}
+
+.transition:hover {
+  transform: rotate(90deg);
+  background: rgba(255, 0, 0, 0);
+}
+</style>
+
+
+<div class="transition">Hover over me</div>
+<div class="message"></div>
+
+<script>
+const message = document.querySelector(".message");
+const el = document.querySelector(".transition");
+
+el.addEventListener("transitionrun", () => {
+  message.textContent = "transitionrun fired";
+});
+
+el.addEventListener("transitionstart", () => {
+  message.textContent = "transitionstart fired";
+});
+
+el.addEventListener("transitioncancel", () => {
+  message.textContent = "transitioncancel fired";
+});
+
+el.addEventListener("transitionend", () => {
+  message.textContent = "transitionend fired";
+});
+</script>
+
+```
+
+
 
 
 >transitionend 이벤트
