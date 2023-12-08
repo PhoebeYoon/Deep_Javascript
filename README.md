@@ -45,6 +45,24 @@ app.listen(52273, ()=>{
 5xx : 서버 오류     
 
 
+## response객체들
+Response.body (Read only)      
+Response.headers (Read only)    
+Response.ok (Read only)    
+Response.redirected  (Read only)    
+Response.status (Read only)    
+Response.type (Read only)   
+Response.url (Read only)   
+
+### Static methods
+Response.error()     
+Response.redirect()     
+Response.json()     
+Response.clone()      
+Response.blob()      
+Response.text()    
+
+
 
 
 
