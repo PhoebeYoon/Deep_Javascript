@@ -111,12 +111,24 @@ app.delete('/user/:id', (req,res)=>{
 
 ```
 
-
 postman 데스크탑을 설치하고 테스트를 이어갑니다    
 <img width="600" alt="스크린샷 2023-12-09 오전 12 23 51" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/80638b6f-27be-49e4-89d4-f4d1235bab2f">
 
    
 <img width="600" alt="스크린샷 2023-12-09 오전 12 24 42" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/f8bc8915-7e1f-4adb-8563-6e9b352324a2">
+
+
+이제 위에서 작성한 내용을 터미널에서 실행시키고 
+``` > node index.js  ```  서버를 실행하고 웹브라우저로 접속해 보면 아래와 같다.  
+
+<img width="706" alt="스크린샷 2023-12-09 오전 12 30 27" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/b3f22f7b-b8f6-4d43-8e95-96c329d9832a">
+
+
+id가 0 을 접속하면   
+<img width="300" alt="스크린샷 2023-12-09 오전 12 33 55" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/8609d137-5759-409b-a33f-e898a9fa95f2">
+
+id가 1을 접속하면  
+<img width="300" alt="스크린샷 2023-12-09 오전 12 35 18" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/6a6fe839-1c36-4632-a857-91515f832a6d">
 
 
 
