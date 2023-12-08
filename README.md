@@ -46,12 +46,48 @@ body-parser 미들웨어는 요청본문을 분석해 준다.
 클라이언트가 서버로 데이터를 보낼때 응답본문 (body) 와 본문의 종류 ( Content-Type) , 요청본문의 종류 ( Encoding-Type)를 전달한다 
 그리고 이것을 도와주는 것이 body-parser미들웨어이다.  
 
-```
+```js
+터미널에서 
 > sudo npm install body-parser
 
 
+const express = require('express');
+const fs = require('fs') ;
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use( express.static('public'))
+app.use(bodyParser.urlencoded( { extended: false}))
+
+app.get('/', (req, res)=>{
+    let output ="";
+    output +='<form method="POST"> '
+    output +=' <input type="text" name="a" />'
+    output +=' <input type="text" name="b" />'
+    output +=' <input type="submit" />'
+    output +=' </form>'
+
+    res.send(output)
+})
+
+app.post('/', (req, res)=>{
+    res.send(req.body)
+})
+
+app.listen(52273, ()=>{
+    console.log('Server is running... http://127.0.0.1:52273')
+})
 
 ```
+
+해당 url로 접속하면  app.get()에 넣은 내용이 브라우저창에 나온다.  
+<img width="260" alt="스크린샷 2023-12-08 오후 4 20 44" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/aa8ac584-1d27-4a99-bab6-5011d75fcdc2">
+
+그리고 input 에 내용을 넣으면 그 내용이 다시 브라우저에 나타난다.  
+
+<img width="260" alt="스크린샷 2023-12-08 오후 4 20 51" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/92d44ef4-3d20-47dc-8932-b4495ddca4aa">
+
+
 
 
 
