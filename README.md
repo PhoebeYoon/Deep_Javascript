@@ -149,4 +149,8 @@ id가 1을 접속하면
 
 
 
+#### 🍎 이외에도 카카오개발자 툴을 이용하여 RESTful 웹서비스를 할수도 있다.  
+https://developers.kakao.com/console/app  
+
+
 
