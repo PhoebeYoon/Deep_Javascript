@@ -130,11 +130,22 @@ postman 데스크탑을 설치합니다.
 <img width="706" alt="스크린샷 2023-12-09 오전 12 30 27" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/b3f22f7b-b8f6-4d43-8e95-96c329d9832a">
 
 
+
 id가 0 을 접속하면   
 <img width="300" alt="스크린샷 2023-12-09 오전 12 33 55" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/8609d137-5759-409b-a33f-e898a9fa95f2">
 
+
+
 id가 1을 접속하면  
 <img width="300" alt="스크린샷 2023-12-09 오전 12 35 18" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/6a6fe839-1c36-4632-a857-91515f832a6d">
+
+
+
+
+<img width="400" alt="스크린샷 2023-12-09 오전 11 53 59" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/a453b185-e21c-438a-95d7-ecf3684b7fe6">
+
+브라우저창에서 id 1번 검색해 보면 데이터가 없다고 나온다.   
+<img width="400" alt="스크린샷 2023-12-09 오전 11 55 11" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/4e8954c0-4867-4b68-a258-9a87c11aa2bf">
 
 
 
