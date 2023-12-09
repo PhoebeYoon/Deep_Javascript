@@ -108,17 +108,23 @@ app.delete('/user/:id', (req,res)=>{
         res.status(404).send('데이터가 존재하지 않습니다.')
 })
 
-
 ```
+> 이때 GET 이외의 요청은 모두 x-www-form-urlencoded 방식으로 데이터를 전달한다. 따라서 body-parser를 사용해 클라이언트에서 데이터를 분석해야 한다. 
 
-postman 데스크탑을 설치하고 테스트를 이어갑니다    
-<img width="600" alt="스크린샷 2023-12-09 오전 12 23 51" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/80638b6f-27be-49e4-89d4-f4d1235bab2f">
+
+### postman을 이용하여 POST, GET 요청을 만들어보자 
+
+postman 데스크탑을 설치합니다.    
+
+<img width="600" alt="스크린샷 2023-12-09 오전 12 23 51" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/80638b6f-27be-49e4-89d4-f4d1235bab2f">   
+
+몇개의 데이터를 더 입력합니다.   
 
    
 <img width="600" alt="스크린샷 2023-12-09 오전 12 24 42" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/f8bc8915-7e1f-4adb-8563-6e9b352324a2">
 
 
-이제 위에서 작성한 내용을 터미널에서 실행시키고 
+
 ``` > node index.js  ```  서버를 실행하고 웹브라우저로 접속해 보면 아래와 같다.  
 
 <img width="706" alt="스크린샷 2023-12-09 오전 12 30 27" src="https://github.com/PhoebeYoon/Deep_Javascript/assets/48478079/b3f22f7b-b8f6-4d43-8e95-96c329d9832a">
