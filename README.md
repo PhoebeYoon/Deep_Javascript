@@ -88,7 +88,7 @@ const x5 = new Bmw('red')
 >x5.c ="pink" 로 주고
 >x5.c 엔터 하면 'pink'로 출력되지만
 >x5.getColor() 로 주면 여전히 red 가 출력되므로 결과적으로 값이 변경되질 않는다.
-> x5 instanceof Bmw // 결과는 true  
+>x5 instanceof Bmw // 결과는 true  
 
 
 2.
@@ -102,7 +102,7 @@ let x5= new Bmw()
 
 >브라우저 콘솔창에서 
 >x5.getColor()
-< 'red' 출력
+<'red' 출력
 
 참고로 , this.getColor  ~ 대신 let getColor ~ 로 하게되면
 해당 스코프 아래에 return getColor;를 해주고 x5.getColor() 가 아닌 x5()로 컬러러값을 얻는다.
