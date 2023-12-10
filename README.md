@@ -103,6 +103,13 @@ let x5= new Bmw()
 >브라우저 콘솔창에서 
 >x5.getColor()
 < 'red' 출력
+
+참고로 , this.getColor  ~ 대신 let getColor ~ 로 하게되면
+해당 스코프 아래에 return getColor;를 해주고 x5.getColor() 가 아닌 x5()로 컬러러값을 얻는다.
+생각해보면 당연하다. let getColor는 해당 함수를 변수로 선언했기 때문에 getColor 변수를 리턴해야 하고
+ x5() 함수 형태로 접근해야 한다.
+this.getColor로 적었다면 return getColor; 없어도 되고 접근할때 x5.getColor() 함수로 컬러값을 얻어야 한다. 
+
 ``` 
 
 
