@@ -72,13 +72,14 @@ const f1 = ()=>{
 setTimout() 없이 사용해 본다. 즉시로 동일한 결과를 얻을 수 있다.   
  const f1 = ()=>{
         return new Promise((resolve, reject)=>{
-            resolve(' 1번 주문 완료')
+            resolve(' 1번 주문 완료') // 여기서 성공했다고 가정하여 resolve()를 호출
         })
         }
     const f2 = (message)=>{
         console.log(message) // f1에서 전달된 resolve()결과를 출력한다
         return new Promise((resolve, reject)=>{ 
-            resolve(' 2번 주문 완료')
+            resolve(' 2번 주문 완료') // 여기서 성공했다고 가정하여 resolve()를 호출
+            // 만약 f2가 실패했다고 가정한다면 reject('실패')라고 하면 된다.  
         })
         }
     const f3 = (message)=>{
