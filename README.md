@@ -33,7 +33,38 @@ const demo = new Promise((res, err)=>{
     }).finally(()=>{
         console.log("--end--")
     })
-
 ```
 
+
+```js
+const f1 = ()=>{
+  return new Promise((resolve, reject)=>{
+     setTimeout( ()=>{
+      resolve(' 1번 주문 완료')
+      }, 1000)
+  })
+  }
+  const f2 = (message)=>{
+  console.log(message) // f1에서 전달된 resolve()결과를 출력한다
+  return new Promise((resolve, reject)=>{
+      setTimeout( ()=>{
+      resolve(' 2번 주문 완료')
+      }, 3000)
+  })
+  }
+  const f3 = (message)=>{
+  console.log(message) // f2에서 전달된 resolve()결과를 출력한다
+  return new Promise((resolve, reject)=>{
+      setTimeout( ()=>{
+      resolve(' 3번 주문 완료')
+      }, 2000)
+  })
+        }
+  console.log('시작')
+   f1()
+   .then((resolve) => f2(resolve))
+   .then((resolve) => f3(resolve))
+   .then((resolve) => console.log(resolve) )
+
+```
 
