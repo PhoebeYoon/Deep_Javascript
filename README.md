@@ -86,7 +86,7 @@ Off 출력
 ```js
 class Bmw extends Car{
     constructor(color){
-    super(color);  // 주의 super() 호출할때 부모의 constructor(변수)형식대로 선언해줘야 한다. 
+    super(color);  //super() 호출할때 부모의 constructor(변수)형식대로 선언해줘야 한다. 
      this.navi =1;
     }
     park(){
