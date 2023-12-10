@@ -96,6 +96,7 @@ class Bmw extends Car{
 }
 > 터미널에서
 >z4.navi  // 1 출력
+>z4.color // 'blue' 출력
 ```
 
 
