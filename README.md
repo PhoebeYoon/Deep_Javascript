@@ -99,4 +99,50 @@ setTimout() 없이 사용해 본다. 즉시로 동일한 결과를 얻을 수 �
         })
 
 ```
+위와 동일하지만 2번이 실패했다고 가정해서 실행하면   
+```js
+const f2 = (message)=>{
+        console.log(message) // f1에서 전달된 resolve()결과를 출력한다
+        return new Promise((resolve, reject)=>{ 
+            reject(' 2번 실패')
+        })
+        }
+
+결과는,
+시작
+ 1번 주문 완료
+ 2번 실패
+The End
+2번에서 실패했기 때문에 f3으로 넘어가지 않는다.
+```
+
+## Promise.all()  
+
+```js
+ const f1 = ()=>{
+        return new Promise((resolve, reject)=>{
+            resolve(' 1번 주문 완료')
+        })
+        }
+    const f2 = (message)=>{
+        return new Promise((resolve, reject)=>{ 
+            resolve(' 2번 주문 완료')
+        })
+        }
+    const f3 = (message)=>{
+        return new Promise((resolve, reject)=>{
+            resolve(' 3번 주문 완료')
+        })
+        }
+      console.log('시작')
+     Promise.all([f1(),f2(),f3()]).then( (resolve)=>{  // 배열 형식으로 
+        console.log(resolve)
+    })
+
+실행결과는,
+> (3)[' 1번 주문 완료', ' 2번 주문 완료', ' 3번 주문 완료']
+```
+
+
+
 
