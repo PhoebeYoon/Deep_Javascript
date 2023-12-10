@@ -71,6 +71,19 @@ let x5= Bmw()
 브라우저 콘솔창에서
 > x5()
 >'red' 출력
+
+------ 생성자를 사용하면
+function Bmw(){
+    let c = 'red'
+    this.getColor = function(){
+        return c
+    }
+}
+let x5= new Bmw()
+
+>브라우저 콘솔창에서 
+>x5.getColor()
+< 'red' 출력
 ``` 
 
 
