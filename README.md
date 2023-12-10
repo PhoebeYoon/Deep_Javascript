@@ -41,5 +41,5 @@ const x4 = new Bmw('green')
 
 - hasOwnProperty
 - instanceof
-
+- x5.constructor === Bmw
 
