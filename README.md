@@ -30,7 +30,7 @@ let Rectangle = class {
             this.width = width;
         }
 };
-console.log(Rectangle.name);  // class 뒤에 이름이 없기 때문에 Rectangle rk skdhsek.  
+console.log(Rectangle.name);  // class 뒤에 이름이 없기 때문에 Rectangle 로 나온다.  
 
 let Rectangle2 = class  Rectangle2{
         constructor(height, width) {
