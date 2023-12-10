@@ -44,6 +44,10 @@ const x4 = new Bmw('green')
 - x5.constructor === Bmw
 
 ## 클로저
+“A closure is the combination of a function and the lexical environment within which that function was declared.”   
+
+이것은 클로저로 선언된 부분의 위에서 선언된 변수( free variable)를 기억하고 자신이 호출될때의 상태를 기억하며, 자기자신이 리턴된다.  
+
 ```js
 위의 내용에서 콘솔창에서 색상을 임의로 변경하면 
 >x5.color="pink"
