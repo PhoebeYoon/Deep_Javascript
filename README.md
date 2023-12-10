@@ -42,4 +42,11 @@ console.log(Rectangle2.name)
 
 ```
 
+## Class body에 뭘 넣을수 있을까
+
+Class body 는 {  } 시작한다.  그리고 여기에 메서드와 constructor가 들어간다.  
+constructor메서드는 class 로 생성된 객체를 생성하고 초기화하기 위한 특수한 메서드이다.
+constructor라는 이름을 가진 메서드는 해당 클래스 안에 1개만 존재해야한다. 
+
+
 
