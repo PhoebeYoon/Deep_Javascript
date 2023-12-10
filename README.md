@@ -81,6 +81,22 @@ stop!
 Off 출력
 ```
 
+위의 내용으로 extends 한 Bmw에 constructor를 재정의하고자 한다. 이때 반드시 부모를 super()로 불려들어야 한다. 
+
+```js
+class Bmw extends Car{
+    constructor(){
+    super();
+     this.navi =1;
+    }
+    park(){
+        console.log("Parking...")
+    }
+   
+}
+> 터미널에서
+>z4.navi  // 1 출력
+```
 
 
 
