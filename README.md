@@ -73,6 +73,24 @@ let x5= Bmw()
 >'red' 출력
 
 ------ 생성자를 사용하면
+1.
+const Bmw = function (color){
+    const c = color;
+    this.getColor = function(){
+        console.log(c)
+    }
+}
+const x5 = new Bmw('red')
+이렇게 작성하고
+브라우저 콘솔창에서
+>x5.getColor()
+< red
+>x5.c ="pink" 로 주고
+>x5.c 엔터 하면 'pink'로 출력되지만
+>x5.getColor() 로 주면 여전히 red 가 출력되므로 결과적으로 값이 변경되질 않는다. 
+
+
+2.
 function Bmw(){
     let c = 'red'
     this.getColor = function(){   // this을 붙여주어야 한다. 
