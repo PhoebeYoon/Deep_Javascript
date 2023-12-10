@@ -88,10 +88,14 @@ setTimout() 없이 사용해 본다. 즉시로 동일한 결과를 얻을 수 �
         })
         }
       console.log('시작')
-       f1()
+      f1()
        .then((resolve) => f2(resolve))
        .then((resolve) => f3(resolve))
        .then((resolve) => console.log(resolve) )
+        .catch(console.log)
+        .finally(()=>{
+            console.log('The End')
+        })
 
 ```
 
