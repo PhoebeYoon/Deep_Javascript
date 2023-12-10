@@ -75,6 +75,10 @@ class Bmw extends Car{
 }
 
 const z4 = new Bmw("blue")
+
+>z4.stop()
+stop!
+Off 출력
 ```
 
 
