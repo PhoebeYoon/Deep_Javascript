@@ -75,7 +75,7 @@ let x5= Bmw()
 ------ 생성자를 사용하면
 function Bmw(){
     let c = 'red'
-    this.getColor = function(){
+    this.getColor = function(){   // this을 붙여주어야 한다. 
         return c
     }
 }
