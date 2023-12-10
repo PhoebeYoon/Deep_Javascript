@@ -87,7 +87,8 @@ const x5 = new Bmw('red')
 < red
 >x5.c ="pink" 로 주고
 >x5.c 엔터 하면 'pink'로 출력되지만
->x5.getColor() 로 주면 여전히 red 가 출력되므로 결과적으로 값이 변경되질 않는다. 
+>x5.getColor() 로 주면 여전히 red 가 출력되므로 결과적으로 값이 변경되질 않는다.
+> x5 instanceof Bmw // 결과는 true  
 
 
 2.
