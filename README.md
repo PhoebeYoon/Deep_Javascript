@@ -20,4 +20,26 @@ class도 특별한 함수라고 했다. 그런데 함수는 선언하기전에�
 class는 반드시 정의한 뒤에 사용해야 한다는 점이 다르다 즉 Hoisting에서 다른 것이다.  
 
 
-### Class 표현식
+### Class 표현식   
+Class 표현식은 class를 정의하는 또 다른 방법이다. Classs 표현식은 이름을 가질 수도 있고 없을 수도 있는데 해당 Class 표현식의 이름을 알고 싶다면 name 속성으로 사용해야 한다. 
+아래는 이에 대한 설명이다.  
+```js
+let Rectangle = class {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+};
+console.log(Rectangle.name);  // class 뒤에 이름이 없기 때문에 Rectangle rk skdhsek.  
+
+let Rectangle2 = class  Rectangle2{
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+};
+console.log(Rectangle2.name)
+
+```
+
+
