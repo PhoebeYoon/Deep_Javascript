@@ -4,7 +4,7 @@
 
 
 
-## __proto__
+## ```__proto__```   
 ```js
 const car = {
         wheels :4,
