@@ -59,13 +59,18 @@ const x4 = new Bmw('green')
 만약 임의로 변경하고 싶지 않다면 이때 클로저를 사용하면 된다     
 
 ```js
-const Bmw = function(color){
-    this.c = color
-    this.getColor = function(){
-        console.log(this.c)
+function Bmw(){
+    let c = 'red'
+    let getColor = function(){
+        console.log(c)
     }
+    return getColor;
 }
-const x5= new Bmw('yellow')
+let x5= Bmw()
+
+브라우저 콘솔창에서
+> x5()
+>'red' 출력
 ``` 
 
 
