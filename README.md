@@ -48,5 +48,32 @@ Class body 는 {  } 시작한다.  그리고 여기에 메서드와 constructor�
 constructor메서드는 class 로 생성된 객체를 생성하고 초기화하기 위한 특수한 메서드이다.
 constructor라는 이름을 가진 메서드는 해당 클래스 안에 1개만 존재해야한다. 
 
+## extends 
+```js
+
+class Car{
+    constructor(color){
+    this.color= color;
+    this.wheels = 4;
+    }
+    drive(){
+        console.log("drive...")
+    }
+    stop(){
+        console.log("stop!")
+    }
+}
+
+class Bmw extends Car{
+    park(){
+        console.log("Parking...")
+    }
+}
+
+const z4 = new Bmw("blue")
+```
+
+
+
 
 
