@@ -8,7 +8,7 @@ Class는 사실 "특별한 함수"입니다. 함수를 함수 표현식과 함�
 ### Class 선언
 Class를 정의하는 한 가지 방법은 class 키워드를 사용하여 선언한다. 
 
-```
+```js
 class Rectangle {
   constructor(height, width) {
     this.height = height;
