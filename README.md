@@ -68,6 +68,10 @@ class Bmw extends Car{
     park(){
         console.log("Parking...")
     }
+   stop(){  // Override
+          super.stop() // 상위 메소드를 그대로 사용
+          console.log("Off")  // 상위 메소드를 재 정의
+      }
 }
 
 const z4 = new Bmw("blue")
