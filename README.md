@@ -3,7 +3,7 @@
  
 
 
-### 📖 기초내용
+### 1. 📖 Fundalmental & Advanced
 1. 수업설명
 2. Browser, Editor and Terminal 셋팅하기   
 3. 자바스크립트 실행환경   
@@ -24,10 +24,15 @@
 18. Event Listener
 19. Event - targets, preventDefault, Form events
 20. Event - Scroll, Modal, Tabs
-21. Prototypes - This, New
-22. Async Await, Promises
-23. ajax & fetching data
-24. 그외
+   
+21. Destructuring
+22. Prototypes - This, New
+23. Class
+24. Map, Set
+25. Async Await, Promises
+26. ajax & fetching data
+27. ES6의 그외 
+
 
 ### Sources 탭에 대한 설명
 1. Watch - 표현식을 평가하고 결과를 보여준다
