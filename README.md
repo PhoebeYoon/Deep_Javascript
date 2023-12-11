@@ -49,8 +49,10 @@ let generator = [0,...abc()]  //전개구문을 이용
 console.log(generator)
 결과는,
 (3)[0,1,2] 
-```
+```   
 참고로 다음의 코드를 실행해보자   
+
+
 ```js
 function* abc() {
     yield 1;
@@ -66,7 +68,7 @@ for(let i=0; i<3; i++) {
 결과는
 {value: 1, done: false}
 {value: 2, done: false}
-{value: 3, done: ture}
+{value: 3, done: true}
 
 // for문안의   console.log (generator.next().value); 변경해보면
 결과는
