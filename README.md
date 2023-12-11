@@ -54,7 +54,7 @@ showName()
 Promise{<fulfilled>:'Tom'} 이다
 
 ```
-같은 코드이지만 await 과 async를 붙여보자. await는 async 안에서만 사용할 수 있다. 
+같은 코드이지만 await 과 async를 붙여보자. **await는 async 안에서만 사용할 수 있다.**
 동일코드에 아래 부부만 바꾼다.   
 ```js
  async function showName(){
@@ -71,7 +71,7 @@ Tom 이다
 ```
 흔히들 setTimeout() 함수를 중간에 붙이는 것은 사용자가 눈으로 확인할 시간을 주기 위한 것이지 꼭 필요해서는 아니다.  
 
-await, async에서 에러가 났을때는 try{} catch{} 문으로 처리해준다.   
+await, async에서 에러가 났을때는 **try{} catch{} 문으로 처리해준다.**   
 ```js
  async function showName(){
     console.log("1")
