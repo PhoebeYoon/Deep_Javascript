@@ -24,7 +24,8 @@
 18. Event Listener
 19. Event - targets, preventDefault, Form events
 20. Event - Scroll, Modal, Tabs
-   
+----------------
+
 21. Destructuring
 22. Prototypes - This, New
 23. Class
