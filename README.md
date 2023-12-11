@@ -19,3 +19,42 @@ let 변수 = 함수이름()
 next()문은 value (산출값) , done (함수실행이 끝나면 ture, 아니면 false를 갖는다)  
 
 > function* 함수이름() 또는 function *함수이름() 둘다 맞는 표현   
+
+```js
+function* abc() {
+    yield 1;
+    yield 2;
+    return 3;
+}
+
+let generator = abc();
+// console.log(generator) 이렇게는 1,2가 출력되지 않는다. 
+
+for(let value of generator) {
+  console.log (value); // 1, 2가 출력됨
+}
+// 여기서 3이 출력되지 않는이유는 for문으로 인해 yield문을 차례로 접근해서
+// 실행할때 {value:3, done:true} 를 반환하고 이때 done:true이면
+// 마지막 value를 무시하기 때문입니다 
+```
+그래서 위의내용을 아래와 같이 변경해 본다. 
+```js
+function* abc() {
+    yield 1;
+    yield 2;
+    return 3;
+}
+
+let generator = [0,...abc()]  //전개구문을 이용
+console.log(generator)
+결과는,
+(3)[0,1,2] 
+```
+
+
+
+
+
+
+
+
