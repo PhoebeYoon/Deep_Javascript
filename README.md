@@ -77,9 +77,26 @@ for(let i=0; i<3; i++) {
 3 이다 
 ```
 
+### 제너레이터함수의 장점
+다른 프로그래밍 언어에서 while문은 무한루프에 빠지기 쉽다. 그런데 generator함수를 이용하면 next()를 호출할때 실행되기 때문에 무한루프에 빠지지 않게 할 수 있다. 
 
+```js
+ function* abc(){
+    let i=0;
+    while (true){
+        yield i++
+    }
+}
+const a= abc()
 
-
+브라우저 콘솔창에서 a.next()를 할때만 계산이 되므로 무한루프에 빠지지 않는다
+>a.next()
+<{value: 0, done: false}
+>a.next()
+<{value: 1, done: false}
+>a.next()
+<{value: 2, done: false}
+```
 
 
 
