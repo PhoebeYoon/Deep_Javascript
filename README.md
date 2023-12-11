@@ -50,6 +50,32 @@ console.log(generator)
 결과는,
 (3)[0,1,2] 
 ```
+참고로 다음의 코드를 실행해보자   
+```js
+function* abc() {
+    yield 1;
+    yield 2;
+    return 3;
+}
+
+let generator = abc()
+// 위의 코드에서는 for of 문을 사용했다. 
+for(let i=0; i<3; i++) {
+  console.log (generator.next()); // 1, 2가 출력됨
+}
+결과는
+{value: 1, done: false}
+{value: 2, done: false}
+{value: 3, done: ture}
+
+// for문안의   console.log (generator.next().value); 변경해보면
+결과는
+1
+2
+3 이다 
+```
+
+
 
 
 
