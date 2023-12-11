@@ -16,6 +16,7 @@ let 변수 = 함수이름()
 ```
 이런 구조로 되어 있으면 Generator 함수는 Generator 객체를 생성한다.    
 제너레이터함수의 메소드로는 next()가 있으며 이것은 yield문을 차례대로 찾아 실행한다.  
+즉 next()가 호출되기까지 실행을 멈추었다가 재개하는 것이다.   
 next()문은 value (산출값) , done (함수실행이 끝나면 ture, 아니면 false를 갖는다)  
 
 > function* 함수이름() 또는 function *함수이름() 둘다 맞는 표현   
