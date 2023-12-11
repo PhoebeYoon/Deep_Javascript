@@ -3,7 +3,7 @@
  
 
 
-### 1. 📖 Fundalmental & Advanced
+###  📖 Fundalmental & Advanced
 1. 수업설명
 2. Browser, Editor and Terminal 셋팅하기   
 3. 자바스크립트 실행환경   
