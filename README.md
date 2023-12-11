@@ -33,7 +33,7 @@
 25. Async Await, Promises
 26. ajax & fetching data
 27. ES6의 그외 
-
+28. 벤치마킹 사이트 구현, 쇼핑몰구현 외
 
 ### Sources 탭에 대한 설명
 1. Watch - 표현식을 평가하고 결과를 보여준다
