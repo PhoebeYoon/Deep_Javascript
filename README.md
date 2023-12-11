@@ -3,7 +3,7 @@
  
 
 
-###  📖 Fundalmental & Advanced
+### 📖 Fundalmental & Advanced
 1. 수업설명
 2. Browser, Editor and Terminal 셋팅하기   
 3. 자바스크립트 실행환경   
@@ -35,7 +35,7 @@
 27. ES6의 그외 
 28. 벤치마킹 사이트 구현, 쇼핑몰구현 외
 
-### Sources 탭에 대한 설명
+### 📖 Sources 탭에 대한 설명
 1. Watch - 표현식을 평가하고 결과를 보여준다
 2. Call Stack - 코드를 해당 중단점으로 안내한 실행경로를 역순으로 표시한다
 3. Scope - 현재 정의된 모든 변수를 출력한다.
