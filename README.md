@@ -71,6 +71,43 @@ Tom 이다
 ```
 흔히들 setTimeout() 함수를 중간에 붙이는 것은 사용자가 눈으로 확인할 시간을 주기 위한 것이지 꼭 필요해서는 아니다.  
 
+await, async에서 에러가 났을때는 try{} catch{} 문으로 처리해준다.   
+```js
+ async function showName(){
+    console.log("1")
+    try {
+        let result= await getName();
+         console.log(result)
+    } catch(e){
+     console.log('error 발생',e)
+    }
+} 
+
+function getName(){
+    console.log("2")
+    return new Promise((res,rej)=>{
+        res('Tom')  // 일부러 에러를 발생시키기위해 re('Tom')해보자
+    })
+}
+console.log("0")
+showName()
+
+결과는 동일하다
+0
+1
+2
+Tom
+
+에러가 발생되면 결과는
+0
+1
+2
+error 발생 ReferenceError: re is not defined
+...
+
+```
+
+
 
 
 
