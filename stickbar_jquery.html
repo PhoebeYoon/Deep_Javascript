@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box;}
+body { font-family: "Century Gothic", "Lato", sans-serif;}
+a { text-decoration: none; }
+html { scroll-snap-type: y proximity;}
+section { scroll-snap-align: center; }
+section { scroll-snap-type: y mandatory; }
+
+
+.el-hero-tabs,
+.el-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: #eee;
+  text-align: center;
+  padding: 0 2em;
+}
+.el-hero-tabs h1,
+.el-slide h1 {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1rem;
+}
+.el-hero-tabs h3,
+.el-slide h3 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+
+.el-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+}
+.el-hero-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+
+.el-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+}
+.el-hero-tab:hover {
+  color: white;
+  background: rgba(102, 177, 241, 0.8);
+  transition: all 0.5s ease;
+}
+
+.el-hero-tab-auto {
+    pointer-events: inherit;
+}
+.el-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66B1F1;
+  transition: left 0.3s ease;
+}
+
+@media (min-width: 800px) {
+.el-hero-tabs h1,
+.el-slide h1 {
+    font-size: 3rem;
+  }
+.el-hero-tabs h3,
+.el-slide h3 {
+    font-size: 1rem;
+  }
+  .el-hero-tab {
+    font-size: 1rem;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <section class="el-hero-tabs">
+        <h1>STICKY SLIDER NAV</h1>
+        <h3>스크롤하여 내용을 볼 수 있으며 메뉴바가 이동하는 것을 확인하세요</h3>
+        <div class="el-hero-tabs-container">
+          <a class="el-hero-tab" href="#intro">Intro</a>
+          <a class="el-hero-tab" href="#about">About</a>
+          <a class="el-hero-tab" href="#products">Products</a>
+          <a class="el-hero-tab" href="#press">Press</a>
+          <a class="el-hero-tab" href="#findus">Find us</a>
+          <span class="el-hero-tab-slider"></span>
+
+        </div>
+      </section>
+    
+      <!-- Main -->
+      <main class="el-main">
+        <section class="el-slide" id="intro">
+          <h1>Intro</h1>
+          <h3>소개의 말</h3>
+        </section>
+        <section class="el-slide" id="about">
+          <h1>About</h1>
+          <h3>회사소개, 직원소개</h3>
+        </section>
+        <section class="el-slide" id="products">
+          <h1>제품소개</h1>
+          <h3>우리의 아이디어, 제품들을 소개</h3>
+        </section>
+        <section class="el-slide" id="press">
+          <h1>언론</h1>
+          <h3>언론에 소개된 내용, 뉴스, 유튜브, 온갖 자료들</h3>
+        </section>
+        <section class="el-slide" id="findus">
+          <h1>How to reach us</h1>
+          <h3>회사를 찾아오는 길, 연락처등</h3>
+        </section>
+      </main>
+      <script>
+  let tabContainerHeight = 70;
+  let currentTab;
+    $('.el-hero-tab').click(function() { 
+        onTabClick(event, $(this))
+    });
+
+ function onTabClick(event, element){
+            event.preventDefault();
+            let elementLeft = element.offset().left;
+            elementLeft = Math.floor(elementLeft)
+            let clickedTab = element.attr('href');
+            let goSection = $(element.attr('href')).offset().top - tabContainerHeight+1;
+     
+            $('body, html').animate({
+                scrollTop: goSection
+                }, 750);
+            sliderCss(element, elementLeft)
+     } 
+
+  function sliderCss(slider, left){
+      let width=0;
+      width=$(slider).css('width')
+      console.log("*")
+      $('.el-hero-tab-slider').css('width', width)
+      $('.el-hero-tab-slider').css('left', left)
+
+  }
+    
+    function findCurrentSeletor(){
+        $('.el-hero-tab').each(function(){
+        let id= $(this).attr("href");
+        let offsetTop =     $(id).offset().top - tabContainerHeight;
+        let offsetBottom =  $(id).offset().top + $(id).height() - tabContainerHeight;             
+
+        if ($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+                currentTab = this;
+                sliderCss(currentTab,  $(currentTab).offset().left)
+         }
+
+        })
+    }
+    function checkTabContainerPosition(){
+        let offset = $('.el-hero-tabs').offset().top + $('.el-hero-tabs').height()-tabContainerHeight ;
+        let windowScoll = $(window).scrollTop();
+            if(windowScoll > offset) {
+            $('.el-hero-tabs-container').addClass('el-hero-tabs-container--top')
+            } else {
+                $('.el-hero-tabs-container').removeClass('el-hero-tabs-container--top')
+            }
+        }
+
+      $(window).on('scroll resize',function(){
+        $('.el-hero-tab').each(function(){
+         
+        })
+        findCurrentSeletor();
+        checkTabContainerPosition() 
+       })
+        </script>
+</body>
+</html>
