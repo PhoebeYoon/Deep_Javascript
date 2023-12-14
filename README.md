@@ -26,10 +26,8 @@
   function sliderCss(slider, left){
       let width=0;
       width=$(slider).css('width')
-      console.log("*")
       $('.el-hero-tab-slider').css('width', width)
       $('.el-hero-tab-slider').css('left', left)
-
   }
     
     function findCurrentSeletor(){
