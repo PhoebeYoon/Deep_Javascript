@@ -58,10 +58,10 @@ let tabContainerHeight = 70;
     }
     
  $(window).on('scroll resize',function(){
-        $('.el-hero-tab').each(function(){
-            findCurrentSeletor();
-            checkTabContainerPosition() 
-        })
+	$('.el-hero-tab').each(function(){
+	    findCurrentSeletor();
+	    checkTabContainerPosition() 
+	})
        
    })
   
