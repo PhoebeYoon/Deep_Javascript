@@ -6,8 +6,8 @@
 ```js
  <script>
 let tabContainerHeight = 70;
-  let current, next;
-  let currentTab;
+let current;
+let currentTab;
     $('.el-hero-tab').click(function() { 
         onTabClick(event, $(this))
     });
